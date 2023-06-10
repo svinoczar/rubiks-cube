@@ -1,0 +1,4 @@
+package Rotations
+
+class CubeRotation {
+}
