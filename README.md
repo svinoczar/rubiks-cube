@@ -1,1 +1,1 @@
-# rubics-cube
+# rubiks-cube
