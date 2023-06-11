@@ -1,10 +1,10 @@
 package Data
 
 data class RubiksCube(
-    val upSide: ArrayList<Box>,
-    val downSide: ArrayList<Box>,
-    val frontSide: ArrayList<Box>,
-    val backSide: ArrayList<Box>,
-    val leftSide: ArrayList<Box>,
-    val rightSide: ArrayList<Box>
+    var upSide: ArrayList<Box>,
+    var downSide: ArrayList<Box>,
+    var frontSide: ArrayList<Box>,
+    var backSide: ArrayList<Box>,
+    var leftSide: ArrayList<Box>,
+    var rightSide: ArrayList<Box>
 )
