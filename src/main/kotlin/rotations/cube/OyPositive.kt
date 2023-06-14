@@ -1,5 +1,6 @@
 package rotations.cube
 
+import data.RubiksCube
 import rotations.Rotation
 
 /**
@@ -9,7 +10,7 @@ import rotations.Rotation
  * @author svinoczar
  * @since alpha-1.0.0
  */
-class OyPositive: Rotation {
+class OyPositive: Rotation() {
     override fun getName(): String {
         TODO("Not yet implemented")
     }
@@ -18,7 +19,11 @@ class OyPositive: Rotation {
         TODO("Not yet implemented")
     }
 
-    override fun execute() {
-        TODO("Not yet implemented")
+    override fun execute(cube: RubiksCube): RubiksCube {
+        cube.topSide = cube.leftSide
+        cube.leftSide = cube.botSide
+        cube.botSide = cube.rightSide
+        cube.rightSide = cube.topSide
+        return cube
     }
 }

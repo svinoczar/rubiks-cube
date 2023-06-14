@@ -1,8 +1,14 @@
 import data.Box
 import data.Color
 import data.RubiksCube
+import org.koin.core.context.startKoin
+import rotations.rotationModule
 
 fun main() {
+    startKoin {
+        modules(rotationModule)
+    }
+
     val b1 = Box(Color.RED, 0)
     val b2 = Box(Color.YELLOW, 1)
     val b3 = Box(Color.BLUE, 2)

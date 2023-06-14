@@ -1,5 +1,6 @@
 package rotations.sides
 
+import data.RubiksCube
 import rotations.Rotation
 
 /**
@@ -9,7 +10,7 @@ import rotations.Rotation
  * @author svinoczar
  * @since alpha-1.0.0
  */
-class FrontNegative: Rotation {
+class FrontNegative: Rotation() {
     override fun getName(): String {
         TODO("Not yet implemented")
     }
@@ -18,7 +19,10 @@ class FrontNegative: Rotation {
         TODO("Not yet implemented")
     }
 
-    override fun execute() {
-        TODO("Not yet implemented")
+    override fun execute(cube: RubiksCube): RubiksCube {
+        cube.frontSide.forEach {
+            it.position = if (it.position != 8) (it.position + 2) % 8 else it.position
+        }
+        return cube
     }
 }
