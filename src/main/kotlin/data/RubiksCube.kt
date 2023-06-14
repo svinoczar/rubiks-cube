@@ -1,4 +1,4 @@
-package Data
+package data
 
 data class RubiksCube(
     var upSide: ArrayList<Box>,

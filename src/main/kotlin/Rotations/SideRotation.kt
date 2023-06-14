@@ -1,4 +1,0 @@
-package Rotations
-
-class SideRotation {
-}

@@ -1,6 +1,6 @@
-import Data.Box
-import Data.Color
-import Data.RubiksCube
+import data.Box
+import data.Color
+import data.RubiksCube
 
 fun main() {
     val b1 = Box(Color.RED, 0)

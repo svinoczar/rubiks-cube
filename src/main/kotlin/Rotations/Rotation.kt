@@ -1,4 +1,0 @@
-package Rotations
-
-interface Rotation {
-}
