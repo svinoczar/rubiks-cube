@@ -2,6 +2,13 @@ package rotations.cube
 
 import rotations.Rotation
 
+/**
+ * Command for clockwise rotation of the cube by x-axis.
+ * Primary rotation command.
+ *
+ * @author svinoczar
+ * @since alpha-1.0.0
+ */
 class OxPositive: Rotation {
     override fun getName(): String {
         TODO("Not yet implemented")

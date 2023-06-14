@@ -2,6 +2,12 @@ package rotations.sides
 
 import rotations.Rotation
 
+/**
+ * Command for counterclockwise rotation of the right side.
+ *
+ * @author svinoczar
+ * @since alpha-1.0.0
+ */
 class RightNegative: Rotation {
     override fun getName(): String {
         TODO("Not yet implemented")

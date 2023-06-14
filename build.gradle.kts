@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.0"
+    id("org.jetbrains.dokka") version "1.8.20"
     application
 }
 
@@ -12,6 +13,10 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+}
+
+subprojects {
+    apply(plugin = "org.jetbrains.dokka")
 }
 
 tasks.test {
