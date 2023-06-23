@@ -17,6 +17,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation("io.insert-koin:koin-core:$koinVersion")
+    implementation("org.reflections:reflections:0.10.2")
 }
 
 subprojects {

@@ -1,16 +1,15 @@
-package rotations.cube
+package commands.rotations.sides
 
 import data.RubiksCube
-import rotations.Rotation
+import commands.rotations.Rotation
 
 /**
- * Command for clockwise rotation of the cube by z-axis.
- * Primary rotation command.
+ * Command for counterclockwise rotation of the right side.
  *
  * @author svinoczar
  * @since alpha-1.0.0
  */
-class OzPositive: Rotation() {
+class RightNegative: Rotation() {
     override fun getName(): String {
         TODO("Not yet implemented")
     }
@@ -20,10 +19,9 @@ class OzPositive: Rotation() {
     }
 
     override fun execute(cube: RubiksCube): RubiksCube {
-        cube.frontSide = cube.rightSide
-        cube.leftSide = cube.frontSide
-        cube.backSide = cube. leftSide
-        cube.rightSide = cube.backSide
+        ozPositive.execute(cube)
+        frontPositive.execute(cube)
+        ozNegative.execute(cube)
         return cube
     }
 }

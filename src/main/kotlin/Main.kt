@@ -2,12 +2,15 @@ import data.Box
 import data.Color
 import data.RubiksCube
 import org.koin.core.context.startKoin
-import rotations.rotationModule
+import commands.rotations.rotationModule
+import utils.CommandHandler
 
 fun main() {
     startKoin {
         modules(rotationModule)
     }
+
+    val commandHandler = CommandHandler()
 
     val b1 = Box(Color.RED, 0)
     val b2 = Box(Color.YELLOW, 1)
@@ -53,28 +56,7 @@ fun main() {
 //    row3.forEach { print("$it ") }
 //
 
-
-    frontRotR(rubiksCube.frontSide)
-
-    frontRotL(rubiksCube.frontSide)
-
-    rubiksCube.frontSide.forEach {
-        println((it.position))
-    }
+    commandHandler.parsePackage()
 
 
-}
-
-
-
-fun frontRotR(side: ArrayList<Box>) {
-    side.forEach {
-        it.position = if (it.position != 8) if ((it.position - 2) < 0) (it.position - 2) + 8 else (it.position - 2) + 0 else it.position
-    }
-}
-
-fun frontRotL(side: ArrayList<Box>) {
-    side.forEach {
-        it.position = if (it.position != 8) (it.position + 2) % 8 else it.position
-    }
 }

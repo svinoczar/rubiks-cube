@@ -1,16 +1,18 @@
-package rotations.sides
+package commands.rotations.sides
 
 import data.RubiksCube
-import rotations.Rotation
+import commands.rotations.Rotation
+
 
 /**
- * Command for counterclockwise rotation of the front side.
+ * Command for clockwise rotation of the front side.
  * Primary rotation command.
  *
  * @author svinoczar
  * @since alpha-1.0.0
  */
-class FrontNegative: Rotation() {
+
+class FrontPositive: Rotation() {
     override fun getName(): String {
         TODO("Not yet implemented")
     }

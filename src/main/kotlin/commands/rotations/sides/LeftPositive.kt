@@ -1,17 +1,15 @@
-package rotations.sides
+package commands.rotations.sides
 
 import data.RubiksCube
-import rotations.Rotation
-import rotations.cube.OzNegative
-import rotations.cube.OzPositive
+import commands.rotations.Rotation
 
 /**
- * Command for counterclockwise rotation of the left side.
+ * Command for clockwise rotation of the left side.
  *
  * @author svinoczar
  * @since alpha-1.0.0
  */
-class LeftNegative: Rotation() {
+class LeftPositive: Rotation() {
     override fun getName(): String {
         TODO("Not yet implemented")
     }

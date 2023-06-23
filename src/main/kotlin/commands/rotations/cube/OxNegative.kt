@@ -1,16 +1,17 @@
-package rotations.cube
+package commands.rotations.cube
 
 import data.RubiksCube
-import rotations.Rotation
+import commands.rotations.Rotation
 
 /**
- * Command for clockwise rotation of the cube by x-axis.
+ * Command for counterclockwise rotation of the cube by x-axis.
  * Primary rotation command.
  *
  * @author svinoczar
  * @since alpha-1.0.0
  */
-class OxPositive: Rotation() {
+
+class OxNegative: Rotation() {
     override fun getName(): String {
         TODO("Not yet implemented")
     }
