@@ -20,7 +20,7 @@ class LeftNegative: Rotation() {
 
     override fun execute(cube: RubiksCube): RubiksCube {
         ozNegative.execute(cube)
-        frontPositive.execute(cube)
+        frontNegative.execute(cube)
         ozPositive.execute(cube)
         return cube
     }

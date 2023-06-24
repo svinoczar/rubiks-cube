@@ -20,9 +20,9 @@ class TopNegative: Rotation() {
 
     override fun execute(cube: RubiksCube): RubiksCube {
         oyNegative.execute(cube)
-        ozPositive.execute(cube)
-        frontPositive.execute(cube)
         ozNegative.execute(cube)
+        frontNegative.execute(cube)
+        ozPositive.execute(cube)
         oyPositive.execute(cube)
         return cube
     }
