@@ -20,10 +20,11 @@ class OzNegative: Rotation() {
     }
 
     override fun execute(cube: RubiksCube): RubiksCube {
-        cube.frontSide = cube.rightSide
-        cube.leftSide = cube.frontSide
-        cube.backSide = cube. leftSide
-        cube.rightSide = cube.backSide
+        val frontTmp = cube.frontSide
+        cube.frontSide = cube.leftSide
+        cube.leftSide = cube.backSide
+        cube.backSide = cube. rightSide
+        cube.rightSide = frontTmp
         return cube
     }
 }

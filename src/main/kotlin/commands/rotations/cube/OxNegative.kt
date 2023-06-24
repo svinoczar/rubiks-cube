@@ -21,10 +21,11 @@ class OxNegative: Rotation() {
     }
 
     override fun execute(cube: RubiksCube): RubiksCube {
-        cube.frontSide = cube.topSide
-        cube.topSide = cube.backSide
-        cube.backSide = cube.botSide
-        cube.botSide = cube.frontSide
+        val frontTmp = cube.frontSide
+        cube.frontSide = cube.botSide
+        cube.botSide = cube.backSide
+        cube.backSide = cube.topSide
+        cube.topSide = frontTmp
         return cube
     }
 }
