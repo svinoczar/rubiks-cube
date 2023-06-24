@@ -10,6 +10,8 @@ fun main() {
         modules(rotationModule)
     }
 
+    //TODO: ПЕРЕПИСАТЬ ВСЕ ФУНКЦИИ ВРАЩЕНИЯ В ОДИН КЛАСС (два класса: класс sides и класс cube)
+
     val commandHandler = CommandHandler()
 
     val b1 = Box(Color.RED, 0)
