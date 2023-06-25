@@ -5,25 +5,32 @@ import data.Color
 import data.RubiksCube
 
 class DefaultAssembler: CubeAssembler {
-    private val w = Box(Color.WHITE)
-    private val r = Box(Color.RED)
-    private val y = Box(Color.YELLOW)
-    private val o = Box(Color.ORANGE)
-    private val b = Box(Color.BLUE)
-    private val g = Box(Color.GREEN)
+    private val topSide = arrayListOf<Box>()
+    private val frontSide = arrayListOf<Box>()
+    private val botSide = arrayListOf<Box>()
+    private val backSide = arrayListOf<Box>()
+    private val leftSide = arrayListOf<Box>()
+    private val rightSide = arrayListOf<Box>()
 
-    private val topSide = arrayListOf(y, y, y, y, y, y, y, y, y)
-    private val frontSide = arrayListOf(r, r, r, r, r, r, r, r, r,)
-    private val botSide = arrayListOf(w, w, w, w, w, w, w, w, w)
-    private val backSide = arrayListOf(o, o, o, o, o, o, o, o, o)
-    private val leftSide = arrayListOf(b, b, b, b, b, b, b, b, b)
-    private val rightSide = arrayListOf(g, g, g, g, g, g, g, g, g)
+    private val sides = arrayListOf<ArrayList<Box>>(topSide, frontSide, botSide, backSide, leftSide, rightSide)
+
+    override fun fillSides() {
+        for (side in sides) {
+            for (color in Color.values()) {
+                for (i in 0..8) {
+                    side.add(Box(color, i))
+                }
+            }
+        }
+    }
 
     override fun buildDefault(): RubiksCube {
+        fillSides()
         return RubiksCube(topSide, botSide, frontSide, backSide, leftSide, rightSide)
     }
 
     override fun buildDefault(cube: RubiksCube): RubiksCube {
+        fillSides()
         cube.topSide = topSide
         cube.frontSide = frontSide
         cube.botSide = botSide

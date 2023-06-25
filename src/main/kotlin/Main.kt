@@ -10,7 +10,7 @@ fun main() {
         modules(rotationModule)
     }
 
-    //TODO: ПЕРЕПИСАТЬ ВСЕ ФУНКЦИИ ВРАЩЕНИЯ В ОДИН КЛАСС (два класса: класс sides и класс cube)
+    //TODO: ПЕРЕПИСАТЬ ВСЕ ФУНКЦИИ ВРАЩЕНИЯ В ОДИН КЛАСС (два класса: класс sides и класс cube) UPD: НЕ НАДО ТК ИСПОЛЬЗУЕТСЯ COMMAND PATTERN
 
     val commandHandler = CommandHandler()
 

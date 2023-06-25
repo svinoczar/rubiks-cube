@@ -24,6 +24,12 @@ abstract class Rotation: KoinComponent {
     abstract fun getName (): String
 
     abstract fun getDescription (): String
-
+//
+//    abstract fun frontPositive (cube: RubiksCube): RubiksCube
+//    abstract fun frontNegative (cube: RubiksCube): RubiksCube
+//    abstract fun leftPositive (cube: RubiksCube): RubiksCube
+//    abstract fun leftNegative (cube: RubiksCube): RubiksCube
+//    abstract fun rightPositive (cube: RubiksCube): RubiksCube
+//    abstract fun rightNegative (cube: RubiksCube): RubiksCube
     abstract fun execute (cube: RubiksCube): RubiksCube
 }

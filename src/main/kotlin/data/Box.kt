@@ -2,5 +2,6 @@ package data
 
 data class Box(
     val color: Color,
-    var position: Int = 0 //TODO: написать лямбду, назначающую значение id в массиве "side"
-)
+//    var position: (side: ArrayList<Box>, box: Box) -> Int = { side, box -> side.indexOf(box) },
+    var position: Int
+    )
