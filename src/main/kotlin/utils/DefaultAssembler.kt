@@ -13,19 +13,25 @@ class DefaultAssembler: CubeAssembler {
     private val rightSide = arrayListOf<Box>()
 
     private val sides = arrayListOf<ArrayList<Box>>(topSide, frontSide, botSide, backSide, leftSide, rightSide)
+    private val positions = arrayListOf(0,1,2,7,8,3,6,5,4)
 
     override fun fillSides() {
-        for (side in sides) {
-            for (color in Color.values()) {
-                for (i in 0..8) {
-                    side.add(Box(color, i))
-                }
+        //работает.. не факт, что так как надо
+        for ((side, color) in sides.zip(Color.values())) {
+            for (position in positions) {
+                side.add(Box(color, position))
             }
         }
     }
 
     override fun buildDefault(): RubiksCube {
         fillSides()
+        println(topSide)
+        println(botSide)
+        println(frontSide)
+        println(backSide)
+        println(leftSide)
+        println(rightSide)
         return RubiksCube(topSide, botSide, frontSide, backSide, leftSide, rightSide)
     }
 

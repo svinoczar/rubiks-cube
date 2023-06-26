@@ -2,9 +2,9 @@ package data
 
 enum class Color {
     WHITE,
-    YELLOW,
     RED,
-    BLUE,
+    YELLOW,
+    ORANGE,
     GREEN,
-    ORANGE
+    BLUE
 }
