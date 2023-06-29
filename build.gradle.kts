@@ -16,8 +16,10 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.5.20")
     implementation("io.insert-koin:koin-core:$koinVersion")
     implementation("org.reflections:reflections:0.10.2")
+    implementation ("org.jetbrains.kotlin:kotlin-reflect:1.5.20")
 }
 
 subprojects {

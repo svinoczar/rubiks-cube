@@ -26,12 +26,6 @@ class DefaultAssembler: CubeAssembler {
 
     override fun buildDefault(): RubiksCube {
         fillSides()
-        println(topSide)
-        println(botSide)
-        println(frontSide)
-        println(backSide)
-        println(leftSide)
-        println(rightSide)
         return RubiksCube(topSide, botSide, frontSide, backSide, leftSide, rightSide)
     }
 
@@ -43,7 +37,6 @@ class DefaultAssembler: CubeAssembler {
         cube.backSide = backSide
         cube.leftSide = leftSide
         cube.rightSide = rightSide
-
         return cube
     }
 
