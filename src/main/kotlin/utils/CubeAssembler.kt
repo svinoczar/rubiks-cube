@@ -6,7 +6,5 @@ import data.RubiksCube
 interface CubeAssembler {
     fun fillSides()
 
-    fun buildDefault(): RubiksCube
-
-    fun buildDefault(cube: RubiksCube): RubiksCube
+    fun build()
 }
