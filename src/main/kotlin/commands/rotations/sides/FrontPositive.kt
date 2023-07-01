@@ -2,6 +2,7 @@ package commands.rotations.sides
 
 import data.RubiksCube
 import commands.rotations.Rotation
+import utils.DefaultAssembler
 
 
 /**
@@ -17,11 +18,11 @@ class FrontPositive: Rotation() {
         TODO("Not yet implemented")
     }
 
-    override fun getDescription(): String {
+    override fun cancel() {
         TODO("Not yet implemented")
     }
 
-    override fun execute(cube: RubiksCube): RubiksCube {
+    override fun execute() {
         val tmpLeft = cube.leftSide
         val tmpRight = cube.rightSide
 
@@ -44,6 +45,5 @@ class FrontPositive: Rotation() {
         cube.frontSide.forEach {
             it.position = if (it.position != 8) (it.position + 2) % 8 else it.position
         }
-        return cube
     }
 }

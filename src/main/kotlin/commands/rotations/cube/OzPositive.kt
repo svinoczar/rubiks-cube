@@ -2,6 +2,7 @@ package commands.rotations.cube
 
 import data.RubiksCube
 import commands.rotations.Rotation
+import utils.DefaultAssembler
 
 /**
  * Command for clockwise rotation of the cube by z-axis.
@@ -15,16 +16,15 @@ class OzPositive: Rotation() {
         TODO("Not yet implemented")
     }
 
-    override fun getDescription(): String {
+    override fun cancel() {
         TODO("Not yet implemented")
     }
 
-    override fun execute(cube: RubiksCube): RubiksCube {
+    override fun execute() {
         val frontTmp = cube.frontSide
         cube.frontSide = cube.rightSide
         cube.rightSide = cube.backSide
         cube.backSide = cube.leftSide
         cube.leftSide = frontTmp
-        return cube
     }
 }

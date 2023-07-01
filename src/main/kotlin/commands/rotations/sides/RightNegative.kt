@@ -2,6 +2,7 @@ package commands.rotations.sides
 
 import data.RubiksCube
 import commands.rotations.Rotation
+import utils.DefaultAssembler
 
 /**
  * Command for counterclockwise rotation of the right side.
@@ -14,14 +15,13 @@ class RightNegative: Rotation() {
         TODO("Not yet implemented")
     }
 
-    override fun getDescription(): String {
+    override fun cancel() {
         TODO("Not yet implemented")
     }
 
-    override fun execute(cube: RubiksCube): RubiksCube {
-        ozPositive.execute(cube)
-        frontNegative.execute(cube)
-        ozNegative.execute(cube)
-        return cube
+    override fun execute() {
+        ozPositive.execute()
+        frontNegative.execute()
+        ozNegative.execute()
     }
 }

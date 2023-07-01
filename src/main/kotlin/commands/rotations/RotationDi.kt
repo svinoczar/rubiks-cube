@@ -4,6 +4,7 @@ import commands.rotations.cube.*
 import org.koin.dsl.module
 import commands.rotations.sides.FrontPositive
 import commands.rotations.sides.FrontNegative
+import data.RubiksCube
 import utils.DefaultAssembler
 import utils.io.Printer
 

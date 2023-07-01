@@ -2,6 +2,7 @@ package commands.rotations.cube
 
 import data.RubiksCube
 import commands.rotations.Rotation
+import utils.DefaultAssembler
 
 /**
  * Command for clockwise rotation of the cube by x-axis.
@@ -16,16 +17,15 @@ class OxPositive: Rotation() {
         TODO("Not yet implemented")
     }
 
-    override fun getDescription(): String {
+    override fun cancel() {
         TODO("Not yet implemented")
     }
 
-    override fun execute(cube: RubiksCube): RubiksCube {
+    override fun execute() {
         val frontTmp = cube.frontSide
         cube.frontSide = cube.topSide
         cube.topSide = cube.backSide
         cube.backSide = cube.botSide
         cube.botSide = frontTmp
-        return cube
     }
 }

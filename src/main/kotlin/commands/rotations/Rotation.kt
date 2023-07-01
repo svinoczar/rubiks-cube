@@ -6,6 +6,7 @@ import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import commands.rotations.sides.FrontPositive
 import commands.rotations.sides.FrontNegative
+import utils.DefaultAssembler
 
 /**
  * A basic interface for implementing rotation commands.
@@ -14,6 +15,7 @@ import commands.rotations.sides.FrontNegative
  * @since alpha-1.0.0
  */
 abstract class Rotation: KoinComponent {
+    val cube = DefaultAssembler.rubiksCube!!
     val oyNegative: OyNegative by inject()
     val oyPositive: OyPositive by inject()
     val ozPositive: OzPositive by inject()
@@ -23,13 +25,7 @@ abstract class Rotation: KoinComponent {
 
     abstract fun getName (): String
 
-    abstract fun getDescription (): String
-//
-//    abstract fun frontPositive (cube: RubiksCube): RubiksCube
-//    abstract fun frontNegative (cube: RubiksCube): RubiksCube
-//    abstract fun leftPositive (cube: RubiksCube): RubiksCube
-//    abstract fun leftNegative (cube: RubiksCube): RubiksCube
-//    abstract fun rightPositive (cube: RubiksCube): RubiksCube
-//    abstract fun rightNegative (cube: RubiksCube): RubiksCube
-    abstract fun execute (cube: RubiksCube): RubiksCube
+    abstract fun cancel ()
+
+    abstract fun execute ()
 }

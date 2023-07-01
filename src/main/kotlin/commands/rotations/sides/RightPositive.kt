@@ -14,14 +14,13 @@ class RightPositive: Rotation() {
         TODO("Not yet implemented")
     }
 
-    override fun getDescription(): String {
+    override fun cancel() {
         TODO("Not yet implemented")
     }
 
-    override fun execute(cube: RubiksCube): RubiksCube {
-        ozPositive.execute(cube)
-        frontPositive.execute(cube)
-        ozNegative.execute(cube)
-        return cube
+    override fun execute() {
+        ozPositive.execute()
+        frontPositive.execute()
+        ozNegative.execute()
     }
 }
