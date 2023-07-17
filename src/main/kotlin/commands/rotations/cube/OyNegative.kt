@@ -14,7 +14,7 @@ import utils.DefaultAssembler
 
 class OyNegative: Rotation() {
     override fun getName(): String {
-        TODO("Not yet implemented")
+        return "OyNegative"
     }
 
     override fun cancel() {

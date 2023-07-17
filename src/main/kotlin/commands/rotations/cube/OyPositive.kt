@@ -1,8 +1,6 @@
 package commands.rotations.cube
 
-import data.RubiksCube
 import commands.rotations.Rotation
-import utils.DefaultAssembler
 
 /**
  * Command for clockwise rotation of the cube by y-axis.
@@ -14,7 +12,7 @@ import utils.DefaultAssembler
 
 class OyPositive: Rotation() {
     override fun getName(): String {
-        TODO("Not yet implemented")
+        return "OyPositive"
     }
 
     override fun cancel() {

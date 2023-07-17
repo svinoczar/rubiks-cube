@@ -14,7 +14,7 @@ import utils.DefaultAssembler
 
 class FrontNegative: Rotation() {
     override fun getName(): String {
-        TODO("Not yet implemented")
+        return "FrontNegative"
     }
 
     override fun cancel() {

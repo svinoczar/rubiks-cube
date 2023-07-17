@@ -9,9 +9,10 @@ import commands.rotations.Rotation
  * @author svinoczar
  * @since alpha-1.0.0
  */
+
 class TopNegative: Rotation() {
     override fun getName(): String {
-        TODO("Not yet implemented")
+        return "TopNegative"
     }
 
     override fun cancel() {

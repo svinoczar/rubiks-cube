@@ -11,9 +11,10 @@ import utils.DefaultAssembler
  * @author svinoczar
  * @since alpha-1.0.0
  */
+
 class OzNegative: Rotation() {
     override fun getName(): String {
-        TODO("Not yet implemented")
+        return "OzNegative"
     }
 
     override fun cancel() {

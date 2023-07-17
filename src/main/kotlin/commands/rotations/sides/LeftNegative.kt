@@ -10,9 +10,10 @@ import utils.DefaultAssembler
  * @author svinoczar
  * @since alpha-1.0.0
  */
+
 class LeftNegative: Rotation() {
     override fun getName(): String {
-        TODO("Not yet implemented")
+        return "LeftNegative"
     }
 
     override fun cancel() {

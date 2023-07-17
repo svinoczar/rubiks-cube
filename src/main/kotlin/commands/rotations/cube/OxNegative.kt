@@ -16,7 +16,7 @@ import utils.DefaultAssembler
 
 class OxNegative: Rotation() {
     override fun getName(): String {
-        TODO("Not yet implemented")
+        return "OxNegative"
     }
 
     override fun cancel() {

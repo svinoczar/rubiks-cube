@@ -5,7 +5,7 @@ import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
 
 class CommandHandler {
-    private val commands = mutableMapOf<String, Rotation>()
+    val commands = mutableMapOf<String, Rotation>()
 
     fun parsePackage () {
         val reflections = Reflections("commands/rotations", SubTypesScanner(false))

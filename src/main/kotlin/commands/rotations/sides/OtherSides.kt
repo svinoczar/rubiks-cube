@@ -2,16 +2,22 @@ package commands.rotations.sides
 
 import commands.rotations.Rotation
 
+
+/**
+ * The contents of the execute command from this class
+ * are contained in the commands FrontPositive and FrontNegative.
+ * @author svinoczar
+ * @since alpha 1.0.0
+ */
+
 class OtherSides: Rotation() {
     override fun getName(): String {
-        TODO("Not yet implemented")
+        return "OtherSides"
     }
 
     override fun cancel() {
         TODO("Not yet implemented")
     }
-
-    //TODO Добавить выполнение функции в FrontPositive и FrontNegative
 
     override fun execute() {
         val tmpLeft = cube.leftSide
